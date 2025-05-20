@@ -8,9 +8,8 @@ function App() {
   const [Password, setPassword] = useState( "" )
 
   //usereF
-
+  
   const passwordRef = useRef( null );
-
   const passwordGenrator = useCallback( () => {
 
     let pass = ''
@@ -19,9 +18,9 @@ function App() {
     if ( charAllowed ) str += "!@#$%^&*()[]{}`"
     for ( let i = 1; i <= length; i++ ) {
       let char = Math.floor( Math.random() * str.length )
-      pass += str.charAt( char )
+      pass += str.charAt( char );
     }
-
+    
     setPassword( pass )
 
   }, [length, numberAllow, charAllowed, setPassword,] )
